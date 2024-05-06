@@ -17,6 +17,7 @@ connect()
   .then(async (connection) => {
     const student = await Student.create({ firstName: "John" });
     console.log(
+      "Connection:",
       connection.connections[0].host,
       connection.connections[0].port,
       connection.connections[0].name,
