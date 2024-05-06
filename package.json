@@ -2,7 +2,7 @@
   "name": "mongo-db",
   "version": "1.0.0",
   "description": "js pre-commit template",
-  "main": "src/sum.js",
+  "main": "src/main.js",
   "scripts": {
     "lint": "npx eslint src test",
     "lint:fix": "npm run lint -- --fix",
