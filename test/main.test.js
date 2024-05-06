@@ -1,6 +1,7 @@
 const jest_ = require("@jest/globals");
 
-// const main = require("../src/main.js");
+// TODO fix tests
+//const main = require("../src/main.js");
 
 jest_.describe("Check nothing", function () {
   jest_.it("Check expected result", function () {

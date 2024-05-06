@@ -25,12 +25,8 @@ connect()
   })
   .catch((e) => console.error(e));
 
-// function sum_1(number) {
-//   return number + 1;
-// }
-//
-//
-// // TODO uncomment for testing
-// export const exportedForTesting = {
-//   sum_1,
-// };
+function sum_1(number) {
+  return number + 1;
+}
+
+module.exports = sum_1;
