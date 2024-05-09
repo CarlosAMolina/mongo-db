@@ -10,17 +10,17 @@ const student = new mongoose.Schema({
   firstName: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
-  favoriteFoods: [{type: String}],
+  favoriteFoods: [{ type: String }],
   info: {
     school: {
-      type: String
+      type: String,
     },
     shoeSize: {
-      type: Number
-    }
-  }
+      type: Number,
+    },
+  },
 });
 
 // First argument is the collection.

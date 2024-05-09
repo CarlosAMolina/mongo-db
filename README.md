@@ -15,6 +15,12 @@ docker pull mongodb/mongodb-community-server:latest
 docker run --name mongodb -p 27017:27017 -d mongodb/mongodb-community-server:latest
 ```
 
+## Run script
+
+```bash
+npm run run-main
+```
+
 ## Resources
 
 [Frontend Masters course](https://frontendmasters.com/courses/mongodb)
