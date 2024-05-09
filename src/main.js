@@ -45,6 +45,14 @@ connect()
     console.log("found:", found);
     const foundAll = await Student.find({});
     console.log("foundAll:", foundAll);
+    const foundDateResults = await Student.find({
+      creationDate: { $gte: "2022-10-19" },
+    });
+    console.log("foundDate results:", foundDateResults);
+    const foundDateNoResults = await Student.find({
+      creationDate: { $gte: "2025-10-19" },
+    });
+    console.log("foundDate no results:", foundDateNoResults);
   })
   .catch((e) => console.error(e));
 
