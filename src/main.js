@@ -28,14 +28,19 @@ const Student = mongoose.model("student", student);
 
 connect()
   .then(async (connection) => {
-    const student = await Student.create({ firstName: "John" });
     console.log(
       "Connection:",
       connection.connections[0].host,
       connection.connections[0].port,
       connection.connections[0].name,
     );
-    console.log(student);
+    await Student.deleteMany({});
+    const student = await Student.create({ firstName: "John" });
+    console.log("created", student);
+    const found = await Student.find({ firstName: "John" });
+    console.log("found:", found);
+    const foundAll = await Student.find({});
+    console.log("foundAll:", foundAll);
   })
   .catch((e) => console.error(e));
 
