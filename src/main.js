@@ -7,7 +7,20 @@ const connect = () => {
 
 // Creeate a schema.
 const student = new mongoose.Schema({
-  firstName: String,
+  firstName: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  favoriteFoods: [{type: String}],
+  info: {
+    school: {
+      type: String
+    },
+    shoeSize: {
+      type: Number
+    }
+  }
 });
 
 // First argument is the collection.
