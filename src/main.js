@@ -12,6 +12,7 @@ const student = new mongoose.Schema({
     required: true,
     unique: true,
   },
+  creationDate: Date,
   favoriteFoods: [{ type: String }],
   info: {
     school: {
@@ -35,7 +36,10 @@ connect()
       connection.connections[0].name,
     );
     await Student.deleteMany({});
-    const student = await Student.create({ firstName: "John" });
+    const student = await Student.create({
+      firstName: "John",
+      creationDate: "2024-04-20",
+    });
     console.log("created", student);
     const found = await Student.find({ firstName: "John" });
     console.log("found:", found);
