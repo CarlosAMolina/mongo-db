@@ -53,6 +53,7 @@ connect()
       creationDate: { $gte: "2025-10-19" },
     });
     console.log("foundDate no results:", foundDateNoResults);
+    process.exit();
   })
   .catch((e) => console.error(e));
 
