@@ -18,7 +18,7 @@ docker run --name mongodb -p 27017:27017 -d mongodb/mongodb-community-server:lat
 ## Run script
 
 ```bash
-npm run db 
+npm run db
 ```
 
 ## Resources
